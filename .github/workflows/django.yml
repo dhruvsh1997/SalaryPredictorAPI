@@ -34,8 +34,8 @@ jobs:
       with:
         image: nanajanashia/demo-app
         registry: docker.io
-        username: dhruvsh1997
-        password: 5thMarch1997
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
         tags: dhruvsh1997/salarypredictor:latest
 
 
