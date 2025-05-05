@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-22.04 #ubuntu-latest
+    runs-on: ubuntu-latest # 👈 This is the environment where your job will run ubuntu-22.04
     environment: SalAPI   # 👈 This links the job to your environment with secrets
     # strategy:   # 👈 This create build according to multiple python versions
       # max-parallel: 4
@@ -19,15 +19,16 @@ jobs:
     steps:
     - name: 📥 Checkout Repository
       uses: actions/checkout@v3
-    # - name: Set up Python ${{ matrix.python-version }}
-    #   uses: actions/setup-python@v3
-    #   with:
-    #     python-version: ${{ matrix.python-version }} 👈 If you want to use various version you want to use
 
-    - name: 🐍 Set up Python
-      uses: actions/setup-python@v4
+    - name: 🐍 Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
       with:
-        python-version: 3.10   # 👈 Change this to the version you want to use     
+        python-version: ${{ matrix.python-version }} #👈 If you want to use various version you want to use
+
+    # - name: 🐍 Set up Python
+    #   uses: actions/setup-python@v4
+    #   with:
+    #     python-version: 3.10   # 👈 Change this to the specific version you want to use     
     
     - name: 📦 Install Dependencies
       run: |
