@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 #ubuntu-latest
     environment: SalAPI   # 👈 This links the job to your environment with secrets
     # strategy:   # 👈 This create build according to multiple python versions
       # max-parallel: 4
