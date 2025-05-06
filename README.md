@@ -6,7 +6,7 @@ A lightweight, Django-based REST API that predicts a person's salary using diffe
 
 ---
 
-## 🚀 Features
+## 🚀 Features: -
 
 - 🔍 Predict salary using multiple regression algorithms:
   - Linear Regression

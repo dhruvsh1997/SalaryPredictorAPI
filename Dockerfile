@@ -17,5 +17,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files
 COPY . /app/
 
-# Run the Django app (adjust if needed)
+# Run the Django api app (adjust if needed)
 CMD ["gunicorn", "SalaryPredictor.wsgi:application", "--bind", "0.0.0.0:8000"]
